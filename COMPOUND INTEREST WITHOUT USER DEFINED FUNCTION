@@ -1,0 +1,11 @@
+# Get user input for principal amount, annual interest rate, time, and number of times interest is compounded per year
+P = float(input("Enter the principal amount: "))  # Principal amount
+r = float(input("Enter the annual interest rate (as a percentage): ")) / 100  # Annual interest rate as a decimal
+t = float(input("Enter the number of years: "))  # Time in years
+n = int(input("Enter the number of times interest is compounded per year: "))  # Number of times interest is compounded per year
+
+# Calculate compound interest
+A = P * (1 + r / n) ** (n * t)
+
+# Print the result
+print(f"The amount after {t} years is: ${A:.2f}")
